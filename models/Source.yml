@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: CustomerSalesRaw
+    database: DBTDEMO
+    schema: RAW
+    tables:
+      - name: Customer
+        DESCRIPTION: Club Central Goals
+      - name: CustomerOrder
+        DESCRIPTION: Club Central Goal GOALS
+models:
+  - name: DimAddress
+    description: "Customer's Shipping Address"
+    columns: 
+          - name: SHIPPINGADDRESS
+            tests: 
+                - unique
+                - not_null
+     
